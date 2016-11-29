@@ -1,0 +1,37 @@
+body {
+    padding: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    font-size: 5em;
+    color: #333;
+}
+
+.button-group {
+
+}
+
+.btn {
+    border-top-left-radius: 1px;
+    padding: 5px;
+    transition: all 1s ease;
+    margin-bottom: 10px;
+    background-color: #eee;
+    border-bottom: 2px solid rgb(0, 115, 197);
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    width: 100%;
+}
+
+    .btn:hover {
+        transition: all 1s ease;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+        background-color: #ddd;
+    }
