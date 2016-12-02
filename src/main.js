@@ -21,7 +21,25 @@ main.forms = [
     }),
     new main.Form({
         name: "View Assignments",
-        id: "view"
+        id: "view",
+        init: function(){
+            if(chromeApi) {
+                chromeApi.getAssignments(function(data){
+                    var assignmentContainer = document.getElementById("assignment-container");
+
+                    if(!data.items){
+                        assignmentContainer.innerHTML = "<p class='flow-text'>No Assignments</p>";
+                    } else {
+                        var index = 0,
+                            count = data.items.length;
+
+                        for(; index < count; index++){
+                            assignmentContainer.appendChild(data.items[index].name);
+                        }
+                    }
+                });
+            }
+        }
     }),
     new main.Form({
         name: "Add Topic",
@@ -53,10 +71,14 @@ main.changeForm = function (selector) {
 }
 
 main.switchForm = function (index) {
-    if (index < window.main.forms.length) {
+    if (index < main.forms.length) {
         // We should expect only one form not to be hidden
         document.querySelector("div:not([hide])").className = "hide";
         document.getElementById(main.forms[index].id).className = "";
+
+        if (typeof main.forms[index].init === "function") {
+            main.forms[index].init();
+        }
     }
 }
 

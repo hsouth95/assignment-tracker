@@ -1,5 +1,6 @@
 body {
     padding: 5px;
+    min-width: 300px;
 }
 
 .hide {
@@ -15,23 +16,6 @@ body {
 
 }
 
-.btn {
-    border-top-left-radius: 10px;
-    padding: 5px;
-    transition: all 1s ease;
-    margin-bottom: 10px;
-    background-color: #eee;
-    border-bottom: 2px solid rgb(0, 115, 197);
-    border-right: none;
-    border-top: none;
-    border-left: none;
-    width: 100%;
+.button {
+    margin-bottom: 20px;
 }
-
-    .btn:hover {
-        transition: all 1s ease;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 10px;
-        cursor: pointer;
-        background-color: #ddd;
-    }
