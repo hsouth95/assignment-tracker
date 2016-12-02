@@ -1,14 +1,15 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/materialize.min.css"
 </head>
-<body>
+<body class="center-align">
     <!-- The Home Page -->
     <div id="home">
         <span class="title">Home</span>
         <div class="button-group">
-            <button class="btn" id="add-btn">Add Assignment</button>
-            <button class="btn" id="view-btn">View Assignments</button>
+            <button class="waves-effect waves-light btn-large button" id="add-btn">Add Assignment</button>
+            <button class="waves-effect waves-light btn-large button" id="view-btn">View Assignments</button>
         </div>
     </div>
 
@@ -19,11 +20,8 @@
 
     <!-- View Assignment Topics -->
     <div id="view" class="hide">
-        <span class="title">View</span>
-        <ul>
-            <li>! test</li>
-            <li>another test</li>
-        </ul>
+        <span class="title">View Assignments</span>
+        <div id="assignment-container"></div>
     </div>
 
     <!-- Add Assignment Topic -->
@@ -31,5 +29,6 @@
         <span class="title"></span>
     </div>
 <script src="main.js"></script>
+<script src="chromeApi.js"></script>
 </body>
 </html>
