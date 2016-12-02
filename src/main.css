@@ -3,6 +3,11 @@ body {
     min-width: 300px;
 }
 
+header {
+    border-bottom: 2px solid #03a9f4;
+    margin-bottom: 5px;
+}
+
 .hide {
     display: none;
 }
@@ -10,10 +15,6 @@ body {
 .title {
     font-size: 5em;
     color: #333;
-}
-
-.button-group {
-
 }
 
 .button {
