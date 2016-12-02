@@ -2,13 +2,17 @@
     "manifest_version": 2,
 
     "name": "Assignment Tracker",
-    "description": "An extension to help track the various different details needed for an assignment",
+    "description": "An extension to help track the various different details needed for an assignment.
+    Icons made by Freepik from www.flaticon.com",
     "version": "0.1",
 
     "browser_action": {
-        "default_icon": "icon.png",
         "default_popup": "popup.html",
         "default_title": "Assignment Tracker"
+    },
+    "icons": {
+        "16": "icon16.png",
+        "128": "icon128.png"
     },
     "permissions": [
         "activeTab",
